@@ -1,0 +1,31 @@
+
+
+img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 80vh;
+    margin: 0 auto;
+}
+
+.carouselContainer {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.imageContainer {
+    min-height: 80vh;
+}
+
+.controlsContainer {
+    width: 100%;
+    display: flex;
+}
+
+.descriptionContainer {
+    flex-grow: 1;
+    text-align: center;
+}

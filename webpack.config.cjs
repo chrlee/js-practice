@@ -17,6 +17,10 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
   resolve: {
@@ -28,6 +32,7 @@ module.exports = {
     },
     compress: true,
     port: 9000,
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 
 export default function() {
     return(
@@ -8,6 +8,9 @@ export default function() {
             <ul>
                 <li>
                     <NavLink to={"imageCarousel"}>Image Carousel</NavLink>
+                </li>
+                <li>
+                    <NavLink to={"sseNotifications"}>Server Side Events Demo</NavLink>
                 </li>
             </ul>
         </>

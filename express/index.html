@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        SSE Notifications Demo
+    </head>
+    <body>
+        <h1>🔔 Live Notifications</h1>
+        <ul id="notifications"></ul>
+
+        <script>
+            const eventSource = new EventSource('http://localhost:3001/events');
+            const list = document.getElementById('notifications');
+
+            eventSource.addEventListener('notification', (event) => {
+                const { message } = JSON.parse(event.data);
+                const li = document.createElement('li');
+                li.textContent = message;
+                list.prepend(li);
+            });
+
+            eventSource.onerror = (err) => {
+                console.error('SSE Error:', err);
+            }
+        </script>
+    </body>
+</html>
